@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "state_machine/Xstate.h"
+#include "Xstate.h"
 
 int main(void) {
 
