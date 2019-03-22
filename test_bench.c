@@ -27,6 +27,7 @@ int main(void) {
 	/* Generate event */
 	if(XStateMachine_WriteEvent(LedMachine, X_TurnOn) != eventStack_ok) {
 		/* Error handler */
+		free(LedMachine);
 		return -1;
 	}
 
@@ -36,11 +37,14 @@ int main(void) {
 	/* Generate event */
 	if(XStateMachine_WriteEvent(LedMachine, X_TurnOff) != eventStack_ok) {
 		/* Error handler */
+		free(LedMachine);
 		return -1;
 	}
 
 	/* Run iteration */
 	XStateMachine_RunIteration(LedMachine);
 
+	free(LedMachine);
+	
 	return EXIT_SUCCESS;
 }
