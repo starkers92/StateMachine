@@ -38,7 +38,7 @@ typedef enum {
 typedef struct {
     e_XState currState;
     XEventStack_t event;
-    /* Define any variables required here for state machine process */
+    /* Define any variables required here for user processing */
 } XStateMachine_t;
 
 void XStateMachine_Init(XStateMachine_t* stateMachine);
